@@ -9,7 +9,7 @@ function findLargest(nums) {
 }
 
 let arr = [2, 7, 11, 15,0,22,20,1];
-console.log(findLargest(arr)); // Output: 15
+console.log(findLargest(arr)); // Output: 22
 
 /*
 This approach has a time complexity of O(n) and a space complexity of O(1)
