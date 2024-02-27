@@ -1,0 +1,49 @@
+function removeDuplicate(nums){
+  if(nums.length === 0)
+  {
+    return 0;
+  }
+  let k = 1;
+  for (let i = 1 ; i<nums.length; i++)
+  {
+    if(nums[i] !== nums[k-1])
+    {
+        nums[k]=nums[i]
+        k++
+    }
+  }
+  return k;
+}
+
+let nums = [0,0,1,1,1,2,2,3,3,4];
+console.log(removeDuplicate(nums)); //5
+
+/**
+ * Initialize k = 1. This is the count of unique elements in the array.
+Start a loop from the second element (index i = 1) to the end of the array.
+If the current element nums[i] is not equal to the previous unique element nums[k - 1], then:
+Overwrite the next unique element nums[k] with the current element nums[i].
+Increment k by 1.
+Return k, which is the count of unique elements in the array.
+
+Complexity
+Time complexity:
+The time complexity of this algorithm is O(n), where n is the number of elements in the input vector nums. This is because we iterate through the input vector once, and each iteration takes constant time.
+
+Space complexity:
+The space complexity of this algorithm is O(1) because it modifies the input array in-place without using any additional data structures that depend on the size of the input.
+
+another approach
+
+var removeDuplicates = function(nums) {
+  let i = 0;
+  for (let j = 1; j < nums.length; j++) {
+    if (nums[i] !== nums[j]) {
+      i++;
+      nums[i] = nums[j];
+    }
+  }
+  return i + 1;
+}
+ */
+
