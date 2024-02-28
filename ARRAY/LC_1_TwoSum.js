@@ -36,7 +36,7 @@ var twoSum = function(nums, target) {
         let diff = target - nums[i]
         
         if (mp.has(diff)) {
-            return [i, mp.get(diff)]
+            return [i, mp.get(diff)] // returns an array containing the current index and the index of the other number (retrieved from the map)
         }
         
         mp.set(nums[i], i)
