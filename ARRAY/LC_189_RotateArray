@@ -1,0 +1,30 @@
+var rotate = function(nums, k) {
+    k %= nums.length // if k is greater than nums.length then one cycle is completed that means it will remain the same and we have to remainder shifts
+  
+    let reverse = function(i, j){
+    while(i < j){
+       let temp = nums[i];
+       nums[i] = nums[j];
+       nums[j] = temp;
+       i++;
+       j--;
+       
+   }
+   
+  } // suppose  ----->---> 
+    reverse(0, nums.length-1); // reverse complete array from index 0 to last index  <--<------
+    reverse(0, k-1) // reverse first part ---><----
+    reverse(k, nums.length-1)// reverse second part --->----->
+    
+};
+
+let nums = [1,2,3,4,5,6,7], k = 3;
+console.log(rotate(nums,k));
+
+/**
+ * The rotate function you provided has a time complexity of O(n) and a space complexity of O(1). Here’s why:
+
+Time Complexity: O(n) The function goes through the array a maximum of three times due to the three reverse operations. Since the time complexity of reversing an array (or part of it) is linear, the overall time complexity is O(n).
+
+Space Complexity: O(1) The function only uses a constant amount of extra space to store the variables k, i, and j, and the temporary variable temp used for swapping. Therefore, the space complexity is O(1), which means it uses constant extra space regardless of the input size.
+ */
