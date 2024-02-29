@@ -20,8 +20,6 @@ console.log(moveZeroes([0,1,0,3,12]));
 
 
 
-
-
 /**
  * let’s dry run the moveZeroes function with an example array nums = [0,1,0,3,12].
 
