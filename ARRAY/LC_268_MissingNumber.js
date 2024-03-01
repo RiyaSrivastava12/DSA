@@ -7,7 +7,7 @@ function missingNumber(arr){
 }
 
 let arr1 = [0,3,1];
-console.log(missingNumber(arr1));
+console.log(missingNumber(arr1)); // 2
 
 /**
  * Complexity
