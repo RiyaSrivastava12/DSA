@@ -1,0 +1,37 @@
+var singleNumber = function(nums) {
+    // Initialize the unique number...
+    let uniqNum = 0;
+    // TRaverse all elements through the loop...
+    for (let idx = 0; idx < nums.length; idx++) {
+        // Concept of XOR...
+        uniqNum = uniqNum ^ nums[idx];
+    } return uniqNum;       // Return the unique number...
+};
+
+let nums = [4,1,2,1,2];
+console.log(singleNumber(nums)); // 4
+
+/***
+ * 
+ * The time and space complexity of the singleNumber function is as follows:
+
+Time Complexity: O(n) The function iterates through the array nums once, where n is the length of nums. Therefore, the time complexity is linear in the size of the input array.
+
+Space Complexity: O(1) The function only uses a constant amount of extra space to store the variables uniqNum, idx, and the loop counter. Therefore, the space complexity is O(1), which means it uses constant extra space regardless of the input size.
+
+
+* Here’s how it works:
+
+The function starts by initializing a variable uniqNum to 0. This will hold the unique number in the array.
+It then iterates over the array nums. For each element, it performs a bitwise XOR operation with uniqNum. The XOR operation has a property where x ^ x = 0 and x ^ 0 = x. This means that each number in the array will cancel itself out except for the unique number.
+Finally, the function returns uniqNum, which is the unique number in the array.
+Now, let’s dry run the function:
+
+Start with nums = [4,1,2,1,2] and uniqNum = 0.
+For idx = 0, nums[idx] = 4. Perform uniqNum = uniqNum ^ nums[idx] to get uniqNum = 0 ^ 4 = 4.
+For idx = 1, nums[idx] = 1. Perform uniqNum = uniqNum ^ nums[idx] to get uniqNum = 4 ^ 1 = 5.
+For idx = 2, nums[idx] = 2. Perform uniqNum = uniqNum ^ nums[idx] to get uniqNum = 5 ^ 2 = 7.
+For idx = 3, nums[idx] = 1. Perform uniqNum = uniqNum ^ nums[idx] to get uniqNum = 7 ^ 1 = 6.
+For idx = 4, nums[idx] = 2. Perform uniqNum = uniqNum ^ nums[idx] to get uniqNum = 6 ^ 2 = 4.
+At the end of the function, uniqNum = 4, which is the unique number in the array.
+ */
