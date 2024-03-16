@@ -12,4 +12,4 @@ function searchElement(arr,num){
 
 
 let arr= [1, 2, 3, 4, 5], num = 5;
-console.log(searchElement(arr,num));
+console.log(searchElement(arr,num)); // 4 (index of 5 is 4)
