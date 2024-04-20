@@ -21,7 +21,7 @@ function insertionSort(arr) {
 Space Complexity: The space complexity is O(1), which means it uses constant extra space. This is because the sorting takes place in-place, or within the array itself, and does not require any additional space that scales with the size of the input.
 Please note that while insertion sort is efficient for small arrays or for arrays that are nearly sorted, other sorting algorithms like quicksort or mergesort are generally more efficient for larger or unsorted arrays
   
-let’s dry run the insertionSort function with the array [2, 1, 3, 7, 5].
+let’s dry run the insertionSort function with the array [2, 1, 3, 7, 5]..
 
 Initialization: We start with i = 1 (since the first element alone is already sorted). The currentValue is 1 (the second element of the array).
 First Iteration (i = 1): We enter the inner loop with j = 0. Since arr[j] (which is 2) is greater than currentValue (1), we move arr[j] one position to the right, making the array [2, 2, 3, 7, 5]. As j becomes -1 and is no longer >= 0, we exit the inner loop and place currentValue (1) at arr[j+1] to get [1, 2, 3, 7, 5].
